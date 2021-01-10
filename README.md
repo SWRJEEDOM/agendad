@@ -1,6 +1,6 @@
 # Plugin Jeedom
 
-Ce plugin permet de récupere :
+Ce plugin permet de récuperer :
 -l'heure du premier cours 
 -cours actuel 
 -cours suivant 
