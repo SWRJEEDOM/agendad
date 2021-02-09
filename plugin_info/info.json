@@ -1,7 +1,7 @@
 {
 	"id" : "agendad",
-	"name" : "Agenda Epsi",
-	"description" : "Plugin agenda Epsi",
+	"name" : "Agenda",
+	"description" : "Plugin agendad",
 	"licence" : "AGPL",
 	"author" : "SWR",
 	"require" : "3.3.39",

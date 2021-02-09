@@ -75,6 +75,7 @@ class agendad extends eqLogic
      	$param1 = $this->getConfiguration('param1');
      	$param2 = $this->getConfiguration('param2');
      	$param3 = $this->getConfiguration('param3');
+        $param4 = $this->getConfiguration('param4');
 
      	log::add('agendad', 'info', '-----SET UP----------');
                 //log::add('agendad','info','Url : '.$param1.' -----');
@@ -130,7 +131,7 @@ class agendad extends eqLogic
                             // alarm  
      				$parsed              = date_parse($jsonKey2['start']);
      				$time_seconds        = $parsed['hour'] * 3600 + $parsed['minute'] * 60 + $parsed['second'];
-     				$alarm_clock_seconds = $time_seconds - 3600;
+     				$alarm_clock_seconds = $time_seconds - ($param4*60);
 
      				$alarm_hours   = gmdate("H", $alarm_clock_seconds);
      				$alarm_minutes = gmdate("i", $alarm_clock_seconds);
@@ -213,10 +214,10 @@ class agendad extends eqLogic
      	log::add('agendad', 'info', ' ');
      }
 
-     public static function cron() {
-     	//	$eqlogic->collect_agenda();
-     }
-     
+     /*public function cron() {
+     	
+    
+     }*/
 
     /*
      * Fonction exécutée automatiquement toutes les 5 minutes par Jeedom
@@ -236,11 +237,17 @@ class agendad extends eqLogic
      }
      */
 
-    /*
-     * Fonction exécutée automatiquement toutes les 30 minutes par Jeedom
+
+    //Fonction exécutée automatiquement toutes les 30 minutes par Jeedom
      public static function cron30() {
-     }
-     */
+     	log::add('agendad', 'info', ' ');
+     	log::add('agendad', 'info', ' --------CRON-----------');
+     	log::add('agendad', 'info', ' ');
+    foreach (eqLogic::byType(__CLASS__, true) as $eqLogic) {  // pour tous les équipements actifs de la classe agendad
+    	$eqLogic->collect_agenda();
+    }
+}
+
 
     /*
      * Fonction exécutée automatiquement toutes les heures par Jeedom

@@ -140,24 +140,31 @@ $eqLogics = eqLogic::byType($plugin->getId());
 									<input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="param3" placeholder="{{Prénom}}"/>
 								</div>
 							</div>
-
-							<!-- Champ de saisie du cron d'auto-actualisation + assistant cron -->
-							<!-- La fonction cron de la classe du plugin doit contenir le code prévu pour que ce champ soit fonctionnel -->
 							<div class="form-group">
-								<label class="col-sm-3 control-label">{{Auto-actualisation}}
-									<sup><i class="fas fa-question-circle tooltips" title="{{Fréquence de rafraîchissement de l'équipement}}"></i></sup>
-								</label>
+								<label class="col-sm-3 control-label">{{Reveil -minute}}</label>
 								<div class="col-sm-7">
-									<div class="input-group">
-										<input type="text" class="eqLogicAttr form-control roundedLeft" data-l1key="configuration" data-l2key="autorefresh" placeholder="{{Cliquer sur ? pour afficher l'assistant cron}}"/>
-										<span class="input-group-btn">
-											<a class="btn btn-default cursor jeeHelper roundedRight" data-helper="cron" title="Assistant cron">
-												<i class="fas fa-question-circle"></i>
-											</a>
-										</span>
-									</div>
+									<input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="param4" placeholder="{{60}}"/>
 								</div>
 							</div>
+							<!-- Champ de saisie du cron d'auto-actualisation + assistant cron -->
+							<!-- La fonction cron de la classe du plugin doit contenir le code prévu pour que ce champ soit fonctionnel -->
+							
+							<!div class="form-group">
+								<!label class="col-sm-3 control-label">{{Auto-actualisation}}
+									<!sup><!i class="fas fa-question-circle tooltips" title="{{Fréquence de rafraîchissement de l'équipement}}"><!/i><!/sup>
+								<!/label>
+								<!div class="col-sm-7">
+									<!div class="input-group">
+										<!input type="text" class="eqLogicAttr form-control roundedLeft" data-l1key="configuration" data-l2key="autorefresh" placeholder="{{Cliquer sur ? pour afficher l'assistant cron}}"/>
+										<!span class="input-group-btn">
+											<!a class="btn btn-default cursor jeeHelper roundedRight" data-helper="cron" title="Assistant cron">
+												<!i class="fas fa-question-circle"><!/i>
+											<!/a>
+										<!/span>
+									<!/div>
+								<!/div>
+							<!/div>
+							
 						</div>
 
 						<!-- Partie droite de l'onglet "Équipement" -->
